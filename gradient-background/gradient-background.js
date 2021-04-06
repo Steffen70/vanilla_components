@@ -18,7 +18,7 @@ function setOffset(current) {
     }
 }
 
-const target = document.querySelectorAll('#svnt .grdt-bg, #svnt .navigation');
+const target = document.querySelectorAll('#svnt .grdt-bg, #svnt .navigation, #svnt .calc-offset');
 window.addEventListener('resize', () => target.forEach(setOffset));
 
 window.onload = () => target.forEach(setOffset);

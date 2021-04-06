@@ -10,15 +10,19 @@
     color: white;
 }
 
-#svnt .navigation::after {
+#svnt .navigation .logo-wraper {
+    position: relative;
+}
+
+#svnt .navigation .logo-wraper::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
+    top: var(--offset-top);
     height: var(--nav-height);
-    width: 100%;
     background-color: black;
     z-index: -1;
+    left: var(--offset-left);
+    width: 100vw;
 }
 
 #svnt .navigation .align-left,
@@ -42,6 +46,7 @@
     font-weight: 300;
     font-size: 18px;
     list-style: none;
+    padding: 2px;
 }
 
 #svnt .navigation i {
