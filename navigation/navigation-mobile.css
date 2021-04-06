@@ -14,7 +14,7 @@
         grid-auto-flow: row;
         text-align: right;
         padding: var(--scroll-padding);
-        justify-content: right;
+        justify-items: end;
         align-content: space-around;
         background-color: white;
         transform: translateY(-100%);
