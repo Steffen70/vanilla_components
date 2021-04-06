@@ -1,0 +1,27 @@
+#svnt .grdt-bg {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+#svnt .grdt-bg::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    max-width: var(--scroll-width);
+    top: 0;
+    background: linear-gradient(to right,
+            var(--gradient-from) 0%,
+            var(--gradient-to) 25%,
+            var(--gradient-to) 75%,
+            var(--gradient-from) 100%);
+    mix-blend-mode: multiply;
+    transform: translate(calc(var(--offset-left) - var(--scroll-offset)), var(--offset-top));
+}
+
+#svnt .grdt-bg.stamp {
+    color: white;
+    background: black;
+}
