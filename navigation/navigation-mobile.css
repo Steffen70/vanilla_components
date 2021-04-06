@@ -1,5 +1,13 @@
+#svnt #burger {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
-    #svnt .navigation .align-left {
+    #svnt #burger {
+        display: initial;
+    }
+
+    #svnt #mobile-menu {
         position: absolute;
         top: var(--nav-height);
         right: 0;
@@ -13,7 +21,7 @@
         z-index: 10;
     }
 
-    #svnt .navigation .align-left.open {
+    #svnt #mobile-menu.open {
         transform: translateY(20px);
     }
 }
