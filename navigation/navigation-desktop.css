@@ -10,26 +10,36 @@
     color: white;
 }
 
+#svnt .navigation * {
+    z-index: 40;
+}
+
 #svnt .navigation .logo-wraper {
     position: relative;
 }
 
-#svnt .navigation .logo-wraper::before {
+#svnt .navigation .logo-wraper::before,
+#svnt .navigation .logo-wraper::after {
     content: '';
     position: absolute;
     top: var(--offset-top);
     height: var(--nav-height);
     background-color: black;
-    z-index: -1;
+    z-index: 30;
     left: var(--offset-left);
     width: 100vw;
+}
+
+#svnt .navigation .logo-wraper::after {
+    background-color: white;
+    z-index: 20;
 }
 
 #svnt .navigation .align-left,
 #svnt .navigation .align-right {
     display: inline-grid;
     grid-auto-flow: column;
-    column-gap: 30px;
+    gap: 30px;
     justify-content: start;
     align-items: center;
 }

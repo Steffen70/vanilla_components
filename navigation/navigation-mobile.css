@@ -1,0 +1,19 @@
+@media screen and (max-width: 600px) {
+    #svnt .navigation .align-left {
+        position: absolute;
+        top: var(--nav-height);
+        right: 0;
+        grid-auto-flow: row;
+        text-align: right;
+        padding: var(--scroll-padding);
+        justify-content: right;
+        align-content: space-around;
+        background-color: white;
+        transform: translateY(-100%);
+        z-index: 10;
+    }
+
+    #svnt .navigation .align-left.open {
+        transform: translateY(20px);
+    }
+}
