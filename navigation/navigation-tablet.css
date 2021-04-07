@@ -1,19 +1,19 @@
 @media screen and (max-width: 1400px) {
-    #svnt .navigation {
+    .navigation {
         color: black;
     }
 
-    #svnt .navigation::after {
+    .navigation::after {
         content: none;
     }
 
-    #svnt .navigation .logo-wraper::before {
+    .navigation .logo-wraper::before {
         left: calc(var(--offset-left) - var(--nav-height)*0.5);
         width: calc(var(--offset-left)*-1 + 100% + var(--nav-height));
         transform: skew(45deg);
     }
 
-    #svnt .align-left .grdt-bg::after {
+    .align-left .grdt-bg::after {
         content: none;
     }
 }

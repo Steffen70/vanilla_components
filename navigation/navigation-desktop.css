@@ -1,4 +1,4 @@
-#svnt .navigation {
+.navigation {
     height: var(--nav-height);
     width: calc(100% -2*var(--scroll-padding));
     padding: 0 var(--scroll-padding);
@@ -10,16 +10,16 @@
     color: white;
 }
 
-#svnt .navigation * {
+.navigation * {
     z-index: 40;
 }
 
-#svnt .navigation .logo-wraper {
+.navigation .logo-wraper {
     position: relative;
 }
 
-#svnt .navigation .logo-wraper::before,
-#svnt .navigation .logo-wraper::after {
+.navigation .logo-wraper::before,
+.navigation .logo-wraper::after {
     content: '';
     position: absolute;
     top: var(--offset-top);
@@ -30,13 +30,13 @@
     width: 100vw;
 }
 
-#svnt .navigation .logo-wraper::after {
+.navigation .logo-wraper::after {
     background-color: white;
     z-index: 20;
 }
 
-#svnt .navigation .align-left,
-#svnt .navigation .align-right {
+.navigation .align-left,
+.navigation .align-right {
     display: inline-grid;
     grid-auto-flow: column;
     gap: 30px;
@@ -44,14 +44,14 @@
     align-items: center;
 }
 
-#svnt .navigation h1 {
+.navigation h1 {
     font-family: 'Caesar Dressing';
     font-size: 40px;
     letter-spacing: 2px;
     font-weight: 400;
 }
 
-#svnt .navigation li {
+.navigation li {
     font-family: 'Zilla Slab';
     font-weight: 300;
     font-size: 18px;
@@ -59,10 +59,10 @@
     padding: 2px;
 }
 
-#svnt .navigation i {
+.navigation i {
     font-size: 25px;
 }
 
-#svnt .align-left .grdt-bg.stamp {
+.align-left .grdt-bg.stamp {
     font-weight: 500;
 }

@@ -1,0 +1,1 @@
+let onLoad = []; window.onload = () => onLoad.forEach(f => f());

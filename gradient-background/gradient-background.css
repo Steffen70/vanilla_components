@@ -1,10 +1,10 @@
-#svnt .grdt-bg {
+.grdt-bg {
     overflow: hidden;
     display: inline-block;
     position: relative;
 }
 
-#svnt .grdt-bg::after {
+.grdt-bg::after {
     content: '';
     position: absolute;
     display: block;
@@ -21,7 +21,7 @@
     transform: translate(calc(var(--offset-left) - var(--scroll-offset)), var(--offset-top));
 }
 
-#svnt .grdt-bg.stamp {
+.grdt-bg.stamp {
     color: white;
     background: black;
 }
