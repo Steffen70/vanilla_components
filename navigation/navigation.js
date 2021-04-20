@@ -1,18 +1,24 @@
 function toggleOpenClass(setClass = true) {
     if (navigation.classList.contains('open'))
+    {
+        burger.classList.remove('active');
         navigation.classList.remove('open');
+    }
     else if (setClass)
+    {
+        burger.classList.add('active');
         navigation.classList.add('open');
+    }
 }
 
 function isOrContains(t, e) {
     return t === e || e.contains(t);
 }
 
-let navigation;
+let navigation, burger;
 
 onLoad.push(() => {
-    const burger = document.getElementById('burger');
+    burger = document.getElementById('burger');
     navigation = document.getElementById('mobile-menu');
 
     burger.addEventListener('click', toggleOpenClass);

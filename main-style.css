@@ -1,9 +1,9 @@
 :root {
-    --nav-height: 80px;
+    --nav-height: 70px;
     --scroll-width: 1200px;
     --scroll-padding: 20px;
-    --gradient-from: #F0C808;
-    --gradient-to: #FFB4A2;
+    --gradient-from: #8E54E9;
+    --gradient-to: #4776E6;
 }
 
 * {
@@ -18,6 +18,12 @@ body {
 
 body {
     overflow-x: hidden;
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        display: none;
+    }
 }
 
 #scroll {

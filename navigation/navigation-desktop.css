@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+    user-select: none;
 }
 
 .navigation * {
@@ -45,7 +46,7 @@
 }
 
 .navigation h1 {
-    font-family: 'Caesar Dressing';
+    font-family: Lobster;
     font-size: 40px;
     letter-spacing: 2px;
     font-weight: 400;
@@ -54,13 +55,15 @@
 .navigation li {
     font-family: 'Zilla Slab';
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
     list-style: none;
     padding: 2px;
+    cursor: pointer;
 }
 
 .navigation i {
     font-size: 25px;
+    pointer-events: none;
 }
 
 .align-left .grdt-bg.stamp {

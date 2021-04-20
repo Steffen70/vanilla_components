@@ -21,7 +21,7 @@ let root;
 onLoad.push(() => {
     root = document.documentElement;
 
-    const target = document.querySelectorAll('.grdt-bg, .navigation, .calc-offset');
+    const target = document.querySelectorAll('.grdt-bg, .navigation, .calc-offset, .navigation li');
     window.addEventListener('resize', () => target.forEach(setOffset));
 
     target.forEach(setOffset);

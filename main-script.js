@@ -1,1 +1,4 @@
-let onLoad = []; window.onload = () => onLoad.forEach(f => f());
+let onLoad = [];
+
+//Execute all onLoad functions
+window.onload = () => onLoad.forEach(f => f());

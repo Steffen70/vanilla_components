@@ -1,15 +1,17 @@
+li.active,
 .grdt-bg {
     overflow: hidden;
     display: inline-block;
     position: relative;
 }
 
+li.active::after,
 .grdt-bg::after {
     content: '';
     position: absolute;
     display: block;
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw - var(--scroll-padding)*2);
     max-width: var(--scroll-width);
     top: 0;
     background: linear-gradient(to right,
@@ -18,10 +20,20 @@
             var(--gradient-to) 75%,
             var(--gradient-from) 100%);
     mix-blend-mode: multiply;
-    transform: translate(calc(var(--offset-left) - var(--scroll-offset)), var(--offset-top));
+    transform: translate(calc(var(--offset-left) - var(--scroll-offset) + var(--scroll-padding)), var(--offset-top));
 }
 
+li.active,
 .grdt-bg.stamp {
     color: white;
-    background: black;
+    background-color: black;
+}
+
+.light.grdt-bg::after {
+    mix-blend-mode: screen;
+}
+
+.light.grdt-bg.stamp {
+    color: black;
+    background-color: white;
 }

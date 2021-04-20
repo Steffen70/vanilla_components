@@ -1,6 +1,6 @@
 @media screen and (max-width: 1400px) {
     .navigation {
-        color: black;
+        color: var(--navbar-color);
     }
 
     .navigation::after {
@@ -13,7 +13,16 @@
         transform: skew(45deg);
     }
 
-    .align-left .grdt-bg::after {
+    .align-left li.active::after {
         content: none;
+    }
+
+    .align-right li.active {
+        color: black;
+        background-color: white;
+    }
+
+    .align-right li.active::after {
+        mix-blend-mode: screen;
     }
 }
