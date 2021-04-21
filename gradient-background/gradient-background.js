@@ -16,13 +16,23 @@ function setOffset(current) {
     }
 }
 
+function setBodyHeight() {
+    root.style.setProperty('--body-height', `${document.body.scrollHeight}px`);
+}
+
 let root;
 
 onLoad.push(() => {
     root = document.documentElement;
 
     const target = document.querySelectorAll('.grdt-bg, .navigation, .calc-offset, .navigation li');
-    window.addEventListener('resize', () => target.forEach(setOffset));
+    window.addEventListener('resize', () => {
+        setBodyHeight();
+
+        target.forEach(setOffset);
+    });
+
+    setBodyHeight();
 
     target.forEach(setOffset);
 });

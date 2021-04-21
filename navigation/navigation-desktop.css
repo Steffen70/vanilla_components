@@ -32,7 +32,7 @@
 }
 
 .navigation .logo-wraper::before {
-    box-shadow: 0px 5px 15px 2px rgba(168, 168, 168, 0.75);
+    box-shadow: var(--overlay-shadow);
 }
 
 .navigation .logo-wraper::after {

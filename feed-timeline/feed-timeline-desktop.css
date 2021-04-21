@@ -1,18 +1,27 @@
+.pagination,
 .feed-wraper {
     width: 100%;
+    user-select: none;
 }
 
+.pagination,
 .paginated-feed-result {
-    padding: 20px 0;
     font-family: 'Zilla Slab';
     font-weight: 300;
 }
 
+.pagination {
+    font-weight: 500;
+}
+
+.paginated-feed-result {
+    padding: 20px 0;
+}
+
 .feed-item {
-    --timeline-node-size: 26px;
-    --node-before-size: calc(var(--timeline-node-size)/100*40);
+    --node-before-size: calc(var(--timeline-node-size)/100*30);
     display: grid;
-    column-gap: 30px;
+    column-gap: 20px;
     grid-template-columns: auto 1fr;
 }
 
@@ -49,37 +58,94 @@
 
 .feed-item:not(:last-of-type) .timeline .grdt-bg {
     height: calc(100% + var(--timeline-node-size));
-    width: var(--node-before-size);
+    width: calc((var(--timeline-node-size) - var(--node-before-size))*0.5);
     z-index: 3;
 }
 
-.username-review-option {
+.task-title {
     margin: auto 0;
-    display: inline-block;
-}
-
-.username-review-option * {
-    vertical-align: -webkit-baseline-middle;
-    vertical-align: -moz-middle-with-baseline;
     font-weight: 500;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto auto 1fr;
+    column-gap: 5px;
+    align-items: center;
 }
 
-.username-review-option>span:first-child {
-    font-family: Lobster;
-    font-size: 20px;
+.task-title>span:first-child {
+    font-size: 18px;
 }
 
-.username-review-option>span:not(:first-child) {
+.pagination>span,
+.task-title>span:nth-child(2) {
     color: gray;
     letter-spacing: 1px;
     font-size: 14px;
 }
 
-.username-review-option .rating,
-.username-review-option .review {
-    float: right;
+.pagination div,
+.task-title div {
+    position: relative;
+    height: var(--timeline-node-size);
+    border-radius: 5px;
+    justify-self: end;
+}
+
+.pagination div i,
+.task-title div span {
+    color: white;
+    vertical-align: middle;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.pagination div:not(:hover),
+.task-title .review-btn:not(:hover) {
+    background-color: black;
+}
+
+.pagination div:not(:hover)::after,
+.task-title .review-btn:not(:hover)::after {
+    content: none;
+}
+
+.pagination div,
+.task-title div:not(.review-btn) {
+    width: var(--timeline-node-size);
+}
+
+.pagination div,
+.task-title .review-btn {
+    cursor: pointer;
+}
+
+.task-title .review-btn {
+    padding: 0 5px;
+}
+
+.pagination div i,
+.task-title .review-btn span {
+    vertical-align: sub;
 }
 
 .task-description {
-    padding: 10px 0 20px 0;
+    padding: 20px 0 40px 0;
+}
+
+.pagination {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr auto 1fr;
+    column-gap: 20px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.pagination div i {
+    color: white;
+}
+
+.pagination .next-page {
+    justify-self: start;
 }

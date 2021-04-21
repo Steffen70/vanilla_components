@@ -10,7 +10,7 @@ li.active::after,
     content: '';
     position: absolute;
     display: block;
-    height: 100vh;
+    height: var(--body-height);
     width: calc(100vw - var(--scroll-padding)*2);
     max-width: var(--scroll-width);
     top: 0;
