@@ -1,3 +1,7 @@
+#scroll {
+    justify-content: space-around;
+}
+
 .pagination,
 .feed-wraper {
     width: 100%;
@@ -31,6 +35,7 @@
     border-radius: 50%;
     position: relative;
     z-index: 4;
+    cursor: pointer;
 }
 
 .feed-item:not(.last-item) .timeline {
@@ -74,6 +79,7 @@
 
 .task-title>span:first-child {
     font-size: 18px;
+    cursor: pointer;
 }
 
 .pagination>span,
@@ -131,8 +137,14 @@
     vertical-align: sub;
 }
 
+.task-description-wraper {
+    margin: 20px 0 var(--feed-wraper-fade) 0;
+    position: relative;
+}
+
 .task-description {
-    padding: 20px 0 var(--feed-wraper-fade) 0;
+    height: 100px;
+    overflow: hidden;
 }
 
 .pagination {
@@ -163,6 +175,7 @@
     position: relative;
 }
 
+.task-description-wraper.cut-off::after,
 .feed-wraper::before,
 .feed-wraper::after {
     content: '';

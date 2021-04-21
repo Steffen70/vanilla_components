@@ -15,6 +15,8 @@ onLoad.push(() => {
 
     feedWraperFade = parseInt(window.getComputedStyle(feedWraper).getPropertyValue('--feed-wraper-fade'));
 
+    taskDescriptions = document.querySelectorAll('.task-description');
+
     paginationIndicatior = document.querySelector('.pagination-indicator');
     changePaginationIndicatior();
 
@@ -44,6 +46,7 @@ function setVisibleFeed() {
     feedWraper.style.setProperty('--last-item-padding', `${height - lastPageHeight}px`);
 
     scrollCurrent();
+    addCutOffClass();
 }
 
 let nextPageElem, lastPageElem;
@@ -98,4 +101,17 @@ function lastPage() {
     changePaginationIndicatior();
 
     scrollCurrent();
+}
+
+let taskDescriptions;
+
+function addCutOffClass() {
+    taskDescriptions.forEach(p => {
+        const isOverflowing = p.clientHeight < p.scrollHeight
+        const wraper = p.parentNode;
+        if (isOverflowing)
+            wraper.classList.add('cut-off');
+        else if (wraper.classList.contains('cut-off'))
+            wraper.classList.remove('cut-off')
+    });
 }
