@@ -42,7 +42,6 @@ function setVisibleFeed() {
     const lastPageHeight = feedItemArray.slice((pageCount - 1) * visibleItems, feedItemArray.length)
         .reduce((n, i) => n + i.offsetHeight, 0);
 
-    // Bug => --last-item-padding is sometimes set to 0 after resizing
     feedWraper.style.setProperty('--last-item-padding', `${height - lastPageHeight}px`);
 
     scrollCurrent();
@@ -87,6 +86,8 @@ function nextPage() {
 
     deactivateButtons();
     changePaginationIndicatior();
+
+    //Add items to paginated-feed-result
 
     scrollCurrent();
 }
