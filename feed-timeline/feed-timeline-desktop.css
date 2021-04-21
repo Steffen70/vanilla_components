@@ -100,11 +100,13 @@
     justify-content: center;
 }
 
+.pagination .disabled,
 .pagination div:not(:hover),
 .task-title .review-btn:not(:hover) {
     background-color: black;
 }
 
+.pagination .disabled::after,
 .pagination div:not(:hover)::after,
 .task-title .review-btn:not(:hover)::after {
     content: none;
