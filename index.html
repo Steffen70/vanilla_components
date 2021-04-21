@@ -39,10 +39,13 @@
       <link rel="stylesheet"
             href="alternating-title/alternating-title.css">
 
+      <link rel="stylesheet"
+            href="feed-timeline/feed-timeline-desktop.css">
+
       <title>Snitch or Rich</title>
 </head>
 
-<body style="background-color: lightgray;">
+<body>
       <div class="navigation">
             <div class="logo-wraper calc-offset">
                   <h1 class="grdt-bg stamp"
@@ -64,15 +67,66 @@
       </div>
 
       <div id="scroll">
-            <div style="height: 1000px;"></div>
+            <div class="feed-wraper">
+                  <div class="paginated-feed-result">
+
+                        <div class="feed-item">
+                              <div class="timeline-node grdt-bg"></div>
+                              <div class="username-review-option">
+                                    <span class="grdt-bg stamp light">Username</span>
+                                    <span>(21. April 09:41)</span>
+                                    <div class="review"><span>Review</span></div>
+                              </div>
+                              <div class="timeline">
+                                    <div class="grdt-bg"></div>
+                              </div>
+                              <p class="task-description">
+                                    Cheese strings fromage fromage fondue cow queso cheese on toast bavarian bergkase.
+                                    Dolcelatte cheese and biscuits cheesy feet fondue when the cheese comes out
+                                    everybody's happy cheddar fromage frais the big cheese.
+                                    Fromage dolcelatte cheese strings manchego port-salut cheesy grin the big cheese
+                                    cheese and wine.
+                              </p>
+                        </div>
+
+                        <div class="feed-item last-item">
+                              <div class="timeline-node grdt-bg"></div>
+                              <div class="username-review-option">
+                                    <span class="grdt-bg stamp light">Smelly Cat</span>
+                                    <span>(20. April 23:31)</span>
+                                    <div class="rating"><span>10</span></div>
+                              </div>
+                              <!--last-item -> Hide timeline-->
+                              <div class="timeline">
+                                    <div class="grdt-bg"></div>
+                              </div>
+                              <p class="task-description">
+                                    Stilton squirty cheese cheddar.
+                                    Feta rubber cheese smelly cheese who moved my cheese manchego cottage cheese
+                                    camembert de normandie cottage cheese.
+                                    Cheese slices macaroni cheese everyone loves cheese triangles swiss when the cheese
+                                    comes out everybody's happy squirty cheese the big cheese.
+                              </p>
+                        </div>
+
+                  </div>
+            </div>
+
+            <div class="pagination">
+                  <div class="last-page"></div>
+                  <span>1 of 5</span>
+                  <div class="next-page"></div>
+            </div>
       </div>
 
       <script src="main-script.js"></script>
       <script src="gradient-background/gradient-background.js"></script>
       <script src="navigation/navigation.js"></script>
       <script src="alternating-title/alternating-title.js"></script>
+      <script src="feed-timeline/feed-timeline.js"></script>
 
       <script>
+            //Test navigation styling
             function toggleActive(target, navItems) {
                   if (target.classList.contains('active'))
                         return;

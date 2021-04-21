@@ -1,0 +1,85 @@
+.feed-wraper {
+    width: 100%;
+}
+
+.paginated-feed-result {
+    padding: 20px 0;
+    font-family: 'Zilla Slab';
+    font-weight: 300;
+}
+
+.feed-item {
+    --timeline-node-size: 26px;
+    --node-before-size: calc(var(--timeline-node-size)/100*40);
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: auto 1fr;
+}
+
+.timeline-node {
+    width: var(--timeline-node-size);
+    height: var(--timeline-node-size);
+    border-radius: 50%;
+    position: relative;
+    z-index: 4;
+}
+
+.feed-item:not(:last-of-type) .timeline {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.timeline-node::before,
+.feed-item:not(:last-of-type) .timeline .grdt-bg {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.timeline-node::before {
+    width: var(--node-before-size);
+    height: var(--node-before-size);
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.feed-item:not(:last-of-type) .timeline .grdt-bg {
+    height: calc(100% + var(--timeline-node-size));
+    width: var(--node-before-size);
+    z-index: 3;
+}
+
+.username-review-option {
+    margin: auto 0;
+    display: inline-block;
+}
+
+.username-review-option * {
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: -moz-middle-with-baseline;
+    font-weight: 500;
+}
+
+.username-review-option>span:first-child {
+    font-family: Lobster;
+    font-size: 20px;
+}
+
+.username-review-option>span:not(:first-child) {
+    color: gray;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.username-review-option .rating,
+.username-review-option .review {
+    float: right;
+}
+
+.task-description {
+    padding: 10px 0 20px 0;
+}

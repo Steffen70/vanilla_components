@@ -23,5 +23,6 @@
 
     #mobile-menu.open {
         transform: translateY(20px);
+        box-shadow: -5px 5px 15px 2px rgba(168,168,168,0.75);
     }
 }
