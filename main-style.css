@@ -7,7 +7,7 @@
     --gradient-from: #8E54E9;
     --gradient-to: #4776E6;
 
-    --timeline-node-size: 26px;
+    --timeline-node-size: 17px;
 }
 
 * {
@@ -24,14 +24,14 @@ body {
     overflow-x: hidden;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 345px) {
     body {
         display: none;
     }
 }
 
 #scroll {
-    width: calc(100vw - var(--nav-height));
+    width: calc(100vw -2*var(--scroll-padding));
     max-width: var(--scroll-width);
     margin: 0 auto;
     min-height: calc(100vh - var(--nav-height));

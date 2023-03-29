@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+      <!-- font-awesome -->
+      <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" />
+
+      <!-- google fonts -->
+      <link rel="preconnect"
+            href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Zilla+Slab:wght@300;500&display=swap"
+            rel="stylesheet">
+
+      <!-- my styles -->
+      <link rel="stylesheet"
+            href="./main-style.css">
+
+      <link rel="stylesheet"
+            href="gradient-background/gradient-background.css">
+
+      <link rel="stylesheet"
+            href="navigation/navigation-desktop.css">
+
+      <link rel="stylesheet"
+            href="navigation/navigation-tablet.css">
+
+      <link rel="stylesheet"
+            href="navigation/navigation-mobile.css">
+
+      <link rel="stylesheet"
+            href="alternating-title/alternating-title.css">
+
+      <link rel="stylesheet"
+            href="breadcrumb/breadcrumb.css">
+
+      <link rel="stylesheet"
+            href="./impressum.css">
+
+      <title>Seventy Solutions</title>
+</head>
+
+<body>
+      <div class="navigation">
+            <div class="logo-wraper calc-offset">
+                  <h1 class="grdt-bg stamp"
+                      id="alternating-title">
+                        <span id="title-1">Seventy</span>
+                        <span id="title-2">Solutions</span>
+                  </h1>
+            </div>
+            <ul class="align-left"
+                id="mobile-menu">
+                  <li>Shop</li>
+                  <li>Arrivals</li>
+                  <li class="active">Impressum</li>
+            </ul>
+            <div class="align-right">
+                  <li><i class="fas fa-shopping-cart"></i></li>
+                  <li id="burger"><i class="fas fa-bars"></i></li>
+            </div>
+      </div>
+
+      <div id="scroll">
+            <div class="impressum-wraper">
+                  <h3 class="grdt-bg stamp light">Kontakt-Adresse</h3>
+
+                  <div class="grid-wraper">
+                        <p>
+                              Seventy Solutions Steffen<br />
+                              3008 Bern<br />
+                              Schweiz
+                        </p>
+
+                        <div class="breadcrumb grdt-bg light"
+                             onClick="location.href='mailto:info@seventy.mx'"><span>info@seventy.mx</span></div>
+                  </div>
+
+                  <div class="grid-wraper">
+                        <h3 class="grdt-bg stamp light">Haftungsausschluss</h3>
+
+                        <!--ACHTUNG: Wenn Sie die Quelle ohne Erlaubnis von SwissAnwalt entfernen, dann begehen Sie eine Urheberrechtsverletzung welche in jedem Fall geahndet wird.-->
+                        <div class="breadcrumb grdt-bg light"
+                             onClick="location.href='https://www.swissanwalt.ch'"><span>Swiss Anwalt</span></div>
+                  </div>
+
+                  <p>
+                        Der Autor &uuml;bernimmt keinerlei Gew&auml;hr hinsichtlich der inhaltlichen Richtigkeit,
+                        Genauigkeit,
+                        Aktualit&auml;t, Zuverl&auml;ssigkeit und Vollst&auml;ndigkeit der Informationen.
+                  </p>
+
+                  <p>
+                        Haftungsanspr&uuml;che gegen den Autor wegen Sch&auml;den materieller oder immaterieller Art,
+                        welche
+                        aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der ver&ouml;ffentlichten Informationen,
+                        durch
+                        Missbrauch der Verbindung oder durch technische St&ouml;rungen entstanden sind, werden
+                        ausgeschlossen.
+                  </p>
+
+                  <p>
+                        Alle Angebote sind unverbindlich. Der Autor beh&auml;lt es sich ausdr&uuml;cklich vor, Teile der
+                        Seiten oder das gesamte Angebot ohne besondere Ank&uuml;ndigung zu ver&auml;ndern, zu
+                        erg&auml;nzen,
+                        zu l&ouml;schen oder die Ver&ouml;ffentlichung zeitweise oder endg&uuml;ltig einzustellen.
+                  </p>
+
+                  <h3 class="grdt-bg stamp light">Urheberrechte</h3>
+
+                  <p>
+                        Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser
+                        Website, geh&ouml;ren ausschliesslich <strong>Seventy Solutions Steffen</strong> oder den
+                        speziell
+                        genannten
+                        Rechteinhabern. F&uuml;r die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des
+                        Urheberrechtstr&auml;gers im Voraus einzuholen.
+                  </p>
+
+            </div>
+      </div>
+
+      <script src="main-script.js"></script>
+      <script src="gradient-background/gradient-background.js"></script>
+      <script src="navigation/navigation.js"></script>
+      <script src="alternating-title/alternating-title.js"></script>
+
+      <script>
+            //Terst navigation
+            function onNavigationClick(target, navItems) {
+                  if (target.classList.contains('active'))
+                        return;
+
+                  window.location.href = `${target.innerText}.html`;
+            }
+
+
+            onLoad.push(() => {
+                  const navItems = document.querySelectorAll('.navigation li:not(#burger)');
+
+                  //navItems.forEach(i => i.addEventListener('click', e => toggleActive(e.target, navItems)));
+                  navItems.forEach(i => i.addEventListener('click', e => onNavigationClick(e.target, navItems)));
+            });
+      </script>
+</body>
+
+</html>

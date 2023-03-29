@@ -1,6 +1,6 @@
-#scroll {
+/* #scroll {
     justify-content: space-around;
-}
+} */
 
 .pagination,
 .feed-wraper {
@@ -16,6 +16,7 @@
 
 .pagination {
     font-weight: 500;
+    margin-top: auto;
 }
 
 .feed-item {
@@ -36,6 +37,7 @@
     position: relative;
     z-index: 4;
     cursor: pointer;
+    align-self: center;
 }
 
 .feed-item:not(.last-item) .timeline {
@@ -67,7 +69,7 @@
     z-index: 3;
 }
 
-.task-title {
+.product-title {
     margin: auto 0;
     font-weight: 500;
     display: inline-grid;
@@ -77,73 +79,39 @@
     align-items: center;
 }
 
-.task-title>span:first-child {
+@media screen and (max-width: 650px) {
+    .product-title {
+        grid-auto-columns: auto 1fr;
+    }
+
+    .product-title div {
+        display: none;
+    }
+}
+
+.product-title>span:first-child {
     font-size: 18px;
     cursor: pointer;
 }
 
 .pagination>span,
-.task-title>span:nth-child(2) {
+.product-title>span:nth-child(2) {
     color: gray;
     letter-spacing: 1px;
     font-size: 14px;
 }
 
-.pagination div,
-.task-title div {
-    position: relative;
-    height: var(--timeline-node-size);
-    border-radius: 5px;
-    justify-self: end;
-}
-
-.pagination div i,
-.task-title div span {
-    color: white;
-    vertical-align: middle;
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-}
-
-.pagination .disabled,
-.pagination div:not(:hover),
-.task-title .review-btn:not(:hover) {
-    background-color: black;
-}
-
-.pagination .disabled::after,
-.pagination div:not(:hover)::after,
-.task-title .review-btn:not(:hover)::after {
-    content: none;
-}
-
-.pagination div,
-.task-title div:not(.review-btn) {
+.pagination div {
     width: var(--timeline-node-size);
 }
 
-.pagination div,
-.task-title .review-btn {
-    cursor: pointer;
-}
-
-.task-title .review-btn {
-    padding: 0 5px;
-}
-
-.pagination div i,
-.task-title .review-btn span {
-    vertical-align: sub;
-}
-
-.task-description-wraper {
+.product-description-wraper {
     margin: 20px 0 var(--feed-wraper-fade) 0;
     position: relative;
 }
 
-.task-description {
-    height: 100px;
+.product-description {
+    height: 80px;
     overflow: hidden;
 }
 
@@ -175,7 +143,7 @@
     position: relative;
 }
 
-.task-description-wraper.cut-off::after,
+.product-description-wraper.cut-off::after,
 .feed-wraper::before,
 .feed-wraper::after {
     content: '';

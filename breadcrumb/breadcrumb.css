@@ -1,0 +1,33 @@
+div.breadcrumb {
+    position: relative;
+    height: var(--timeline-node-size);
+    border-radius: 5px;
+    height: 26px;
+    justify-self: end;
+    cursor: pointer;
+}
+
+div.breadcrumb:not(:hover) {
+    background-color: black;
+}
+
+div.breadcrumb:not(:hover)::after {
+    content: none;
+}
+
+div.breadcrumb i,
+div.breadcrumb span {
+    color: white;
+    vertical-align: sub;
+}
+
+div.breadcrumb i {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+div.breadcrumb span {
+    padding: 0 5px;
+    font-weight: 500;
+}

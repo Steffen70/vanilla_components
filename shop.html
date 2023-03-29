@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+      <!-- font-awesome -->
+      <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" />
+
+      <!-- google fonts -->
+      <link rel="preconnect"
+            href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Zilla+Slab:wght@300;500&display=swap"
+            rel="stylesheet">
+
+      <!-- my styles -->
+      <link rel="stylesheet"
+            href="./main-style.css">
+
+      <link rel="stylesheet"
+            href="gradient-background/gradient-background.css">
+
+      <link rel="stylesheet"
+            href="navigation/navigation-desktop.css">
+
+      <link rel="stylesheet"
+            href="navigation/navigation-tablet.css">
+
+      <link rel="stylesheet"
+            href="navigation/navigation-mobile.css">
+
+      <link rel="stylesheet"
+            href="alternating-title/alternating-title.css">
+
+      <link rel="stylesheet"
+            href="breadcrumb/bradcrumb.css">
+
+      <title>Seventy Solutions</title>
+</head>
+
+<body>
+      <div class="navigation">
+            <div class="logo-wraper calc-offset">
+                  <h1 class="grdt-bg stamp"
+                      id="alternating-title">
+                        <span id="title-1">Seventy</span>
+                        <span id="title-2">Solutions</span>
+                  </h1>
+            </div>
+            <ul class="align-left"
+                id="mobile-menu">
+                  <li class="active">Shop</li>
+                  <li>Arrivals</li>
+                  <li>Impressum</li>
+            </ul>
+            <div class="align-right">
+                  <li><i class="fas fa-shopping-cart"></i></li>
+                  <li id="burger"><i class="fas fa-bars"></i></li>
+            </div>
+      </div>
+
+      <div id="scroll">
+
+      </div>
+
+      <script src="main-script.js"></script>
+      <script src="gradient-background/gradient-background.js"></script>
+      <script src="navigation/navigation.js"></script>
+      <script src="alternating-title/alternating-title.js"></script>
+
+      <script>
+            //Terst navigation
+            function onNavigationClick(target, navItems) {
+                  if (target.classList.contains('active'))
+                        return;
+
+                  window.location.href = `${target.innerText}.html`;
+            }
+
+
+            onLoad.push(() => {
+                  const navItems = document.querySelectorAll('.navigation li:not(#burger)');
+
+                  //navItems.forEach(i => i.addEventListener('click', e => toggleActive(e.target, navItems)));
+                  navItems.forEach(i => i.addEventListener('click', e => onNavigationClick(e.target, navItems)));
+            });
+      </script>
+</body>
+
+</html>

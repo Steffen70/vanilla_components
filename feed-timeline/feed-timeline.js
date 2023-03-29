@@ -15,7 +15,7 @@ onLoad.push(() => {
 
     feedWraperFade = parseInt(window.getComputedStyle(feedWraper).getPropertyValue('--feed-wraper-fade'));
 
-    taskDescriptions = document.querySelectorAll('.task-description');
+    productDescriptions = document.querySelectorAll('.product-description');
 
     paginationIndicatior = document.querySelector('.pagination-indicator');
     changePaginationIndicatior();
@@ -51,7 +51,11 @@ function setVisibleFeed() {
 let nextPageElem, lastPageElem;
 
 function deactivateButtons() {
-    if (currentPage === pageCount) {
+    if(pageCount <= 1){
+        nextPageElem.classList.add('disabled');
+        lastPageElem.classList.add('disabled');
+    }
+    else if (currentPage === pageCount) {
         nextPageElem.classList.add('disabled');
         lastPageElem.classList.remove('disabled');
     }
@@ -104,10 +108,10 @@ function lastPage() {
     scrollCurrent();
 }
 
-let taskDescriptions;
+let productDescriptions;
 
 function addCutOffClass() {
-    taskDescriptions.forEach(p => {
+    productDescriptions.forEach(p => {
         const isOverflowing = p.clientHeight < p.scrollHeight
         const wraper = p.parentNode;
         if (isOverflowing)
